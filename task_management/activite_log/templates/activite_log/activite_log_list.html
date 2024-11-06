@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>registro de Actividades</h2>
+<a href="{% url 'activite_log_create' %}"> registro de Actividades</a>
+<ul>
+    {% for log in object_list %}
+    <li>{{ log.user.username }} - {{ log.activity }} - {{ log.timestamp }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

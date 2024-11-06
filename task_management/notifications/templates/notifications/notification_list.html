@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h2>Notificaciones</h2>
+<a href="{% url 'notification_create' %}">Lista de Notificaciones</a>
+<ul>
+    {% for notification in object_list %}
+    <li>{{ notification.message }} - {{ notification.is_read }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
