@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Lista de Tareas</h2>
+<a href="{% url 'task_create' %}"> Crear tarea</a>
+
+<ul>
+    {% for task in object_list %}
+        <li>{{task.title}} - {{task.status}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock  %}

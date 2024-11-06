@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Deseas eliminar alguna Tarea</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <button type= "submit">Confirmar</button>
+    <a href="{% url 'task_list' %}"></a>
+</form> 
+
+{% endblock  %}
