@@ -17,7 +17,7 @@ from tasks.models  import Task
 
 class ActiviteLog(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    task = models.ForeignKey(Task, on_delete=models.CASCADE)
+    task = models.ForeignKey(Task, on_delete=models.CASCADE, null= True, blank=True)
     action = models.CharField(max_length=200)
     timestamp = models.DateTimeField(auto_now_add=True)
     
